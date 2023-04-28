@@ -11,26 +11,15 @@ public class ProductDto {
 	private String productName;
 	private String description;
 	private Category category;
-	private String imageUrl;
+	private byte[] image;
 	private double price;
-	@Override
-	public String toString() {
-		return "ProductDto [productId=" + productId + ", productName=" + productName + ", description=" + description
-				+ ", category=" + category + ", imageUrl=" + imageUrl + ", price=" + price + "]";
+	private int stockQuantity;
+	private String base64Image;
+	public String getBase64Image() {
+		return base64Image;
 	}
-	public ProductDto(int productId, String productName, String description, Category category, String imageUrl,
-			double price) {
-		super();
-		this.productId = productId;
-		this.productName = productName;
-		this.description = description;
-		this.category = category;
-		this.imageUrl = imageUrl;
-		this.price = price;
-	}
-	public ProductDto() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setBase64Image(String base64Image) {
+		this.base64Image = base64Image;
 	}
 	public int getProductId() {
 		return productId;
@@ -56,17 +45,44 @@ public class ProductDto {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	public String getImageUrl() {
-		return imageUrl;
+	public byte[] getImage() {
+		return image;
 	}
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setImage(byte[] image) {
+		this.image = image;
 	}
 	public double getPrice() {
 		return price;
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	public int getStockQuantity() {
+		return stockQuantity;
+	}
+	public void setStockQuantity(int stockQuantity) {
+		this.stockQuantity = stockQuantity;
+	}
+	public ProductDto(int productId, String productName, String description, Category category, byte[] image,
+			double price, int stockQuantity) {
+		super();
+		this.productId = productId;
+		this.productName = productName;
+		this.description = description;
+		this.category = category;
+		this.image = image;
+		this.price = price;
+		this.stockQuantity = stockQuantity;
+	}
+	@Override
+	public String toString() {
+		return "ProductDto [productId=" + productId + ", productName=" + productName + ", description=" + description
+				+ ", category=" + category + ", imageUrl=" + image + ", price=" + price + ", stockQuantity="
+				+ stockQuantity + "]";
+	}
+	public ProductDto() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 

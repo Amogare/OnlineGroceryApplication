@@ -1,7 +1,16 @@
 package com.onlinegrocery.exceptions;
-
-public class UnhandledException extends RuntimeException {
-	public UnhandledException(String msg) {
-		super(msg);
-	}
+ 
+import com.onlinegrocery.exceptionmessages.ExceptionMessages;
+ 
+public class UserNotFoundException extends RuntimeException {
+ 
+public UserNotFoundException() {
+super(ExceptionMessages.USER_NOT_FOUND);
 }
+ 
+public UserNotFoundException(String message) {
+super(message);
+}
+ 
+}
+

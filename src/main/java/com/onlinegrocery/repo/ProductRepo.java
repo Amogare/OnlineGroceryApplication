@@ -14,7 +14,7 @@ public interface ProductRepo extends JpaRepository<Product, Integer>{
 
 	List<Product> findByCategory(Category category);
 
-	Wishlist save(Wishlist wishlist);
+	//Wishlist save(Wishlist wishlist);
 
 	
 

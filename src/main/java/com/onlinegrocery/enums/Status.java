@@ -2,30 +2,20 @@ package com.onlinegrocery.enums;
 
 public enum Status {
 	
-    PLACED("PLACED"),
+    PLACED,
 
-    SHIPPED("SHIPPED"),
+    SHIPPED,
 
-    ONTHEWAY("ONTHEWAY"),
+    ONTHEWAY,
 
-    PICKDUP("PICKDUP"),
+    PICKDUP,
 	
-	DELIVERED("DELIVERED");
+	DELIVERED;
 
 	
-	private String status;
+	
 
-	Status(String status){
-
-	this.status = status;
-
-	}
-
-	public String getStatus() {
-
-	return status;
-
-	}
+	
 		
     
 }

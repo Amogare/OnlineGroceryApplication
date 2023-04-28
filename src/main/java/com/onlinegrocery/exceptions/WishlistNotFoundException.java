@@ -1,10 +1,17 @@
 package com.onlinegrocery.exceptions;
-
-public class WishlistNotFoundException  extends RuntimeException{
-
-	public WishlistNotFoundException(String message) {
-		super(message);
-	}
-	
-
+ 
+import com.onlinegrocery.exceptionmessages.ExceptionMessages;
+ 
+public class WishlistNotFoundException extends RuntimeException{
+ 
+public WishlistNotFoundException() {
+super(ExceptionMessages.WISHLIST_NOT_FOUND);
 }
+ 
+public WishlistNotFoundException(String message) {
+super(message);
+}
+ 
+ 
+}
+

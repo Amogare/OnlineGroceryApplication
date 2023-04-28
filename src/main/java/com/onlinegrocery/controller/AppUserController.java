@@ -21,7 +21,7 @@ import com.onlinegrocery.exceptions.AppUserException;
 import com.onlinegrocery.service.AppUserService;
 import com.onlinegrocery.serviceImpl.AppUserServiceImpl;
 
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin
 @RestController //controller and response body
 @RequestMapping("/users")
 public class AppUserController{
@@ -37,19 +37,13 @@ public class AppUserController{
 	public AppUser register(@RequestBody AppUser appUser) {
 		return this.appUserService.register(appUser);
 	}
-	@GetMapping("/findUserName")
-	public String findUserName(@RequestParam String UserName) {
-		return this.appUserService.findUserName(UserName);
-	}
+	
 	@CrossOrigin
 	@PutMapping("/resetpassword")
 	public String resetPassword(@RequestParam String userName,@RequestParam String password , @RequestParam String newPassword) throws AppUserException {
 		 return this.appUserService.resetPassword(userName, password, newPassword);
 	}
-	@PostMapping("/sendEmail")
-	public String sendEmail(@RequestParam String to) throws AppUserException {
-		return this.appUserService.sendEmail(to);
-	}
+	
 	
 }
 

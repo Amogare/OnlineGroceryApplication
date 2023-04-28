@@ -1,10 +1,16 @@
 package com.onlinegrocery.exceptions;
-
-public class ProductNotFoundException  extends RuntimeException{
-
-	public ProductNotFoundException(String message) {
-		super(message);
-	}
-	
-
+ 
+import com.onlinegrocery.exceptionmessages.ExceptionMessages;
+ 
+public class ProductNotFoundException extends RuntimeException {
+ 
+public ProductNotFoundException() {
+super(ExceptionMessages.PRODUCT_NOT_FOUND);
 }
+ 
+public ProductNotFoundException(String message) {
+super(message);
+}
+ 
+}
+
